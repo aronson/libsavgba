@@ -1,5 +1,14 @@
+#ifdef  __cplusplus
+# define __BEGIN_DECLS  extern "C" {
+# define __END_DECLS    }
+#else
+# define __BEGIN_DECLS
+# define __END_DECLS
+#endif
 #ifndef GBA_Flash_H
 #define GBA_Flash_H
+
+__BEGIN_DECLS
 
 /**
  * @brief Flash chip size.
@@ -78,3 +87,5 @@ int flash_read(u32 addr, u8 *data, size_t size);
 int flash_write(u32 addr, u8 *data, size_t size);
 
 #endif /* GBA_Flash_H */
+
+__END_DECLS

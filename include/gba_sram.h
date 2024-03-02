@@ -1,3 +1,13 @@
+#ifdef  __cplusplus
+# define __BEGIN_DECLS  extern "C" {
+# define __END_DECLS    }
+#else
+# define __BEGIN_DECLS
+# define __END_DECLS
+#endif
+
+__BEGIN_DECLS
+
 #ifndef GBA_SRAM_H
 #define GBA_SRAM_H
 
@@ -24,3 +34,5 @@ int sram_read(u32 addr, u8 *data, size_t size);
 int sram_write(u32 addr, u8 *data, size_t size);
 
 #endif /* GBA_SRAM_H */
+
+__END_DECLS
