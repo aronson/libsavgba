@@ -1,5 +1,14 @@
+#ifdef  __cplusplus
+# define __BEGIN_DECLS  extern "C" {
+# define __END_DECLS    }
+#else
+# define __BEGIN_DECLS
+# define __END_DECLS
+#endif
 #ifndef GBA_EEPROM_H
 #define GBA_EEPROM_H
+
+__BEGIN_DECLS
 
 /**
  * @brief EEPROM chip size.
@@ -41,3 +50,5 @@ int eeprom_read(u32 addr, u16 *data);
 int eeprom_write(u32 addr, u16 *data);
 
 #endif /* GBA_EEPROM_H */
+
+__END_DECLS
