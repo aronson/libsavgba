@@ -1,5 +1,5 @@
 project('libsavgba', 'c',
-  version: '3.3.0',
+  version: '3.3.1',
   license: 'BSL',
   meson_version: '>=0.59.0',
   default_options: ['warning_level=1', 'c_std=none'])
