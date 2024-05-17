@@ -1,6 +1,6 @@
 project('libsavgba', 'c',
-  version: '3.3.1',
-  license: 'BSL',
+  version: '3.3.2',
+  license: 'BSL-1.0',
   meson_version: '>=0.59.0',
   default_options: ['warning_level=1', 'c_std=none'])
 
@@ -15,14 +15,11 @@ includes = ['include']
 
 dependencies = dependency('libtonc')
 
-compile_args = []
-
 libsavgba = static_library('savgba', sources_c,
   dependencies: dependencies,
   include_directories: includes)
 
 libsavgba_dep = declare_dependency(
-  compile_args: compile_args,
   include_directories: includes,
   link_with: libsavgba)
 
